@@ -1,38 +1,43 @@
 const billInput = document.querySelector('#bill')
-const tipInput = document.querySelector('#tip')
+const tipPercentInput = document.querySelector('#tip')
 const peopleInput = document.querySelector('#people')
-const displayTip = document.querySelector('#Tip')
-const displayTotal = document.querySelector('#Total')
+const displayTip = document.querySelector('#tip')
+const displayTotal = document.querySelector('#total')
+
+console.log("billInput=" + billInput.value) 
+console.log("tipPercentInput=" + tipPercentInput.value) 
+console.log("peopleInput=" + peopleInput.value) 
+// console.log(displayTip.value) 
+// console.log(displayTotal.value) 
 
 
-
-
+  
 function calculateTip() {
-  const billValue = billInput.value
-  const percent = tipInput.value
 
-  const tipAmount = billValue * tipValue / 100
+  const tip = billInput.value * tipPercentInput.value / 100;
   
-  const totalValue= billValue * tipAmount+ billValue
-  
-  Total tip p/person = tipAmount / number of peopleInput
+  const totalValue = billInput.value + tip.value
 
-  Total p/person = totalValue / number of peopleInput
+  const perperson = totalValue.value / peopleInput.value;
 
-  display.innerHTML = tipAmount
+  console.log("perperson=" + perperson) 
+
+  // display.innerHTML = tip
 }
+
+
 calculateTip()
 
-  billInput.addEventListener('input', calculateTip)
-  tipInput.addEventListener('input', calculateTip)
-  peopleInput.addEventListener('input',calculateTotal)
-  displayTip.innerHTML = tip
+//   billInput.addEventListener('input', calculateTip)
+//   tipInput.addEventListener('input', calculateTip)
+//   peopleInput.addEventListener('input',calculateTotal)
+//   displayTip.innerHTML = tip
 
 
 
 
 
-}
+// }
 
 // billInput.addEventListener("input", calculateTip);
 // tipInput.addEventListener("input", calculateTip);
@@ -49,9 +54,9 @@ calculateTip()
 
 // const tipInput = document.querySelector('#tip')
 
-console.log(display.innerHTML) // prints the text inside the tags
-console.log(billInput.value) // prints the value entered into the input
+// console.log(display.innerHTML) // prints the text inside the tags
+// console.log(billInput.value) // prints the value entered into the input
 
-billInput.value = 999.88 // Set the value to 999.88
+// billInput.value = 999.88 // Set the value to 999.88
 
   
