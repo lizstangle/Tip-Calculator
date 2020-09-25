@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+  </head>
   <body>
     <main>  
     
-    <h1>Tip Calc</h1>  <div id="display">0.00</div>  
-    <input id="bill" value="10.00" type="number">  
-    <input id="tip" value="15" type="number">
+      <h1>Tip Calculator</h1>   
+
+        <h2>
+            <div id="inputs">
+                <label>Bill  <input id="bill" value="0" type="number"></label> 
+                <label>Tip %  <input id="tip" value="0" type="number"></label>
+                <label>People  <input id="people" value = "0" type = "number"></div></label>
+        </h2>
+              <h3>
+                    <div id="result">
+                          <label>Tip Per Person $  <result id="tip per person" value="0" type="number"></label>
+                          <br>  
+                          <label>Total Per Person $ <result id="total per person" value="0" type="number"></label>
+                    </div>
+              </h3> 
     </main>
-    
-    
-    
-    
     
     
     <script src="script.js"></script>
