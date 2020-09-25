@@ -1,11 +1,11 @@
 const billInput = document.querySelector('#bill')
-const tipPercentInput = document.querySelector('#tip')
+const tipInput = document.querySelector('#tip')
 const peopleInput = document.querySelector('#people')
-const displayTip = document.querySelector('#tip')
-const displayTotal = document.querySelector('#total')
+const displayTipAmount = document.querySelector('#tipamount')
+const displayTotalAmount = document.querySelector('#total')
 
 console.log("billInput=" + billInput.value) 
-console.log("tipPercentInput=" + tipPercentInput.value) 
+console.log("tiptInput=" + tipInput.value) 
 console.log("peopleInput=" + peopleInput.value) 
 // console.log(displayTip.value) 
 // console.log(displayTotal.value) 
@@ -14,13 +14,13 @@ console.log("peopleInput=" + peopleInput.value)
   
 function calculateTip() {
 
-  const tip = billInput.value * tipPercentInput.value / 100;
+  const tip = parseInt(billInput.value) * parseInt(tipInput.value) / 100;
   
-  const totalValue = billInput.value + tip.value
+  const totalValue = parseInt(billInput.value) + parseInt(tip.value)
 
-  const perperson = totalValue.value / peopleInput.value;
+  const perperson = totalValue.value / parseInt(peopleInput.value);
 
-  console.log("perperson=" + perperson) 
+  console.log("perperson" + perperson) 
 
   // display.innerHTML = tip
 }
@@ -28,10 +28,10 @@ function calculateTip() {
 
 calculateTip()
 
-//   billInput.addEventListener('input', calculateTip)
-//   tipInput.addEventListener('input', calculateTip)
-//   peopleInput.addEventListener('input',calculateTotal)
-//   displayTip.innerHTML = tip
+  billInput.addEventListener('input', calculateTip)
+  tipInput.addEventListener('input', calculateTip)
+  peopleInput.addEventListener('input',calculateTip)
+  // displayTip.innerHTML = tip
 
 
 
